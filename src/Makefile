@@ -42,7 +42,7 @@ silkjs: deps $(V8DIR) $(V8) $(CORE) $(OBJ) SilkJS.h Makefile
 	gcc -o silkjs $(CORE) $(OBJ) $(V8LIBS) -lmysqlclient -lmm -lgd -lncurses -lssl -lpthread -lsqlite3 -lcurl -lssh2 -lmemcached -lcairo -Wl,-rpath=/usr/local/silkjs/src/v8,-rpath=$(V8LIB_DIR) 
 
 deps: 
-	sudo apt-get -y install libmm-dev libmysqlclient-dev libmemcached-dev libgd2-xpm-dev libncurses5-dev libsqlite3-dev libcurl4-openssl-dev libssh2-1-dev libcairo2-dev
+	sudo apt-get -y install libmm-dev libmysqlclient-dev libmemcached-dev libgd2-xpm-dev libncurses5-dev libsqlite3-dev libcurl4-openssl-dev libssh2-1-dev libcairo2-dev subversion
 
 debug:	    CFLAGS += -g
 debug:	    silkjs
